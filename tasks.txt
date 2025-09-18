@@ -1,0 +1,10 @@
+ID: 1
+Title: create a todo app
+Description: make a todo app that saves to a file
+Status: finished
+
+ID: 2
+Title: commit
+Description: commit this project to the repository
+Status: Unfinished
+
