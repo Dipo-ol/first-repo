@@ -6,5 +6,5 @@ Status: finished
 ID: 2
 Title: commit
 Description: commit this project to the repository
-Status: Unfinished
+Status: finished
 

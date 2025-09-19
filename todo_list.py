@@ -11,7 +11,7 @@ def add_task():
             lines = f.readlines()
             last_id = 0
             for line in reversed(lines):
-                if line.startswith("ID:"):
+                if line.strip().startswith("ID:"):
                     last_id = int(line.split(": ")[1])
                     break
     except FileNotFoundError:
@@ -69,14 +69,19 @@ def edit_task():
     print("No task with that ID found.")
 
 
-print('---------------welcome ----------------\n')
-choice = int(input(
-    '''what do you want to do?\n1.) Add a new task \n2.) Edit a task \n3.) show all tasks\n4.)Quit\n(use the integer)\n'''))
+def main():
+    print('---------------welcome ----------------\n')
+    choice = int(input(
+        '''what do you want to do?\n1.) Add a new task \n2.) Edit a task \n3.) show all tasks\n4.)Quit\n(use the integer)\n'''))
 
-match choice:
-    case 1:
-        add_task()
-    case 2:
-        edit_task()
-    case 3:
-        show_task()
+    match choice:
+        case 1:
+            add_task()
+        case 2:
+            edit_task()
+        case 3:
+            show_task()
+
+
+if __name__ == "__main__":
+    main()
